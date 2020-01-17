@@ -1,0 +1,7 @@
+Package: digital-font
+Architecture: all
+Maintainer: cothrige
+Depends: xfonts-utils (>= 1:7.5+2)
+Priority: optional
+Version: 0.3
+Description: Debian bitmap fonts for X11

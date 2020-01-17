@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "configure" -a -n "$DISPLAY" ]; then
+    # no error even if xset is not installed or the X server refuses
+    xset fp rehash 2>/dev/null || true 
+fi
+
+if which update-fonts-dir >/dev/null 2>&1; then
+        update-fonts-dir --x11r7-layout misc;update-fonts-alias --include /etc/X11/fonts/misc/digital.alias misc
+fi
+
+
+exit 0
